@@ -1,7 +1,7 @@
 def pangram(string):
     list = []
     if len(string) < 26:
-        return len(string)
+        return False
     for i in string:
         for j in i:
             if j not in list:
@@ -12,5 +12,7 @@ def pangram(string):
         return True
     else:
         return False
+
+
 string = 'qwertyuioplkjhgfdsazxcvbnm'
 print(pangram(string))
